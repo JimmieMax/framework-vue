@@ -1,11 +1,12 @@
 ## Framework Vue
+    Framework-Vue is the latest framework with a lot of middleware and build-tools.
 
 ## Tech Stack
- - [node]
+ - [Node](https://nodejs.org)
  - [Koa](https://github.com/koajs/koa)
- - [webpack]
- - [vue]
- - [less]
+ - [Webpack](https://webpack.js.org)
+ - [Vue](https://vuejs.org/)
+ - [Less](http://lesscss.org/)
 
 ## Installation
 
