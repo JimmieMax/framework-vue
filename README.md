@@ -11,7 +11,7 @@
 ## Installation
 
 ```
-$ git clone https://github.com/koajs/koa.git
+$ git clone https://github.com/JimmieMax/framework-vue.git
 $ npm install
 ```
 
