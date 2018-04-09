@@ -1,5 +1,4 @@
-## framework-vue
-Framework: vue
+## Framework Vue
 
 ## Tech Stack
  - [node]
@@ -8,10 +7,19 @@ Framework: vue
  - [vue]
  - [less]
 
+## Installation
+
+```
+$ git clone https://github.com/koajs/koa.git
+$ npm install
+```
+
 ## Run tasks
 ```
-npm run dev //develop and debugger
-npm run release //compile and release
+//develop and debugger
+npm run dev
+//compile and release
+npm run release
 ```
 
 ## Authors
