@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const WebpackDevServer = require('webpack-dev-server')
     , webpack = require('webpack')
@@ -20,4 +20,4 @@ const server = new WebpackDevServer(compiler, {
 server.listen(config.Server.port, 'localhost', err => {
     if (err) throw err;
     console.log(`Listening on http://${config.Server.host + ":" + config.Server.port}`);
-})
+});

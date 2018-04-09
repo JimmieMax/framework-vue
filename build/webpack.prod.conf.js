@@ -4,9 +4,8 @@ const path = require('path')
     , baseConfig = require('./webpack.base.conf');
 
 module.exports = merge(baseConfig, {
-    plugins: [
-        //压缩js
-        new webpack.optimize.UglifyJsPlugin(),
-    ],
+    optimization: {
+        minimize: true
+    },
     mode: 'production',
 });
