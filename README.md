@@ -1,2 +1,9 @@
 # framework-vue
-Framework: node+koa+webpack+vue
+Framework: vue
+
+Tech Stack
+    node
+    koa
+    webpack
+    vue
+    less

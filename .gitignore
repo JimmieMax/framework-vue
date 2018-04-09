@@ -1,0 +1,14 @@
+logs/*
+!.gitkeep
+!/bin/*
+
+tmp
+.DS_Store
+.idea/
+.vscode/
+.project
+npm-debug.log
+
+# Folders
+node_modules/
+src/test/
