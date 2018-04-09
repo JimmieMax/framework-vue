@@ -7,3 +7,7 @@ Tech Stack
     webpack
     vue
     less
+
+Run tasks
+    npm run dev //develop and debugger
+    npm run release //compile and release
