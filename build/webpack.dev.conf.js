@@ -1,12 +1,7 @@
-// const path = require('path'),
-//     webpack = require('webpack'),
-//     OpenBrowserPlugin = require('open-browser-webpack-plugin'),
-//     config = require('../config');
-
-
 const path = require('path')
     , webpack = require('webpack')
     , merge = require('webpack-merge')
+    , OpenBrowserPlugin = require('open-browser-webpack-plugin')
     , config = require('../config')
     , baseConfig = require('./webpack.base.conf');
 
@@ -25,6 +20,9 @@ module.exports = merge(baseConfig, {
         //模块热替换,如果不在dev-server模式下，需要记录数据，recordPath，生成每个模块的热更新模块
         new webpack.HotModuleReplacementPlugin(),
         //报错但不退出webpack进程
+        new OpenBrowserPlugin({
+            url: `http://${config.Server.host + ":" + config.Server.port}`
+        }),
         new webpack.NoEmitOnErrorsPlugin()
     ],
     mode: 'development',
