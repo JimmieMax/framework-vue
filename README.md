@@ -1,21 +1,21 @@
-## Framework Vue
+## Framework Vue :watermelon:
     Framework-Vue is the latest framework with a lot of middleware and build-tools.
 
-## Tech Stack
+## Tech Stack :strawberry:
  - [Node](https://nodejs.org)
  - [Koa](https://github.com/koajs/koa)
  - [Webpack](https://webpack.js.org)
  - [Vue](https://vuejs.org/)
  - [Less](http://lesscss.org/)
 
-## Installation
+## Installation :green_apple:
 
 ```
 $ git clone https://github.com/JimmieMax/framework-vue.git
 $ npm install
 ```
 
-## Run tasks
+## Run tasks :banana:
 ```
 //develop and debugger
 npm run dev
@@ -23,5 +23,5 @@ npm run dev
 npm run release
 ```
 
-## Authors
+## Authors :cherries:
     Jimmie Max

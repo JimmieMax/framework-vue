@@ -7,7 +7,7 @@ const WebpackDevServer = require('webpack-dev-server')
     , webpackConfig = require('../build/webpack.dev.conf')
     , compiler = webpack(webpackConfig);
 
-const server = new WebpackDevServer(compiler, {
+const app = new WebpackDevServer(compiler, {
     //默认会以根文件夹提供本地服务器，这里指定文件夹
     contentBase: path.resolve(__dirname, '../src/client'),
     //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
@@ -17,7 +17,8 @@ const server = new WebpackDevServer(compiler, {
     publicPath: '/',
     inline: true
 });
-server.listen(config.Server.port, 'localhost', err => {
+
+app.listen(config.Server.port, 'localhost', err => {
     if (err) throw err;
     console.log(`Listening on http://${config.Server.host + ":" + config.Server.port}`);
 });
