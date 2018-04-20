@@ -21,6 +21,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2|svg)$/,
+                loader: 'url-loader?limit=50000&name=[path][name].[ext]'
             }
         ]
     },
@@ -31,6 +39,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js',
             //使用@替代src路径，当你引入src下的文件是可以使用import xx from "@/XX.js"
             '@': path.resolve(__dirname, '../src'),
+            '_': path.resolve(__dirname, '../node_modules')
         }
     },
     mode: 'none'
