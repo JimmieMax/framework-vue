@@ -26,5 +26,5 @@ module.exports = merge(baseConfig, {
         new webpack.NoEmitOnErrorsPlugin()
     ],
     mode: 'development',
-    devtool: 'source-map',
+    devtool: 'source-map'
 });
