@@ -1,0 +1,48 @@
+{
+  "name": "framework-vue",
+  "version": "1.0.0",
+  "description": "Framework: node+koa+webpack+vue",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "release": "webpack --progress --config build/webpack.prod.conf.js",
+    "dev": "node bin/dev-server"
+  },
+  "dependencies": {
+    "element-ui": "^2.3.4",
+    "koa": "^2.5.0",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-component": "^1.1.0",
+    "css-loader": "^0.28.11",
+    "less-loader": "^4.1.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-merge": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmieMax/framework-vue.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Jimmie Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimmieMax/framework-vue/issues"
+  },
+  "homepage": "https://github.com/JimmieMax/framework-vue#readme"
+}
