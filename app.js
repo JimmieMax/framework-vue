@@ -14,9 +14,9 @@ app
     .use(views(path.resolve(__dirname, './src')))
     .use(async (ctx,next) => {
         if (ctx.originalUrl == '/') {
-            await ctx.render('/client')
+            await ctx.render('/dist/index.html')
         } else if (ctx.originalUrl == '/admin') {
-            await ctx.render('/admin')
+            await ctx.render('/dist/admin.html')
         } else {
             await next();
         }

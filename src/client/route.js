@@ -6,14 +6,23 @@ import aboutPage from './component/about.vue'
 Vue.use(Router);
 
 export default new Router({
-    routes:[
+    // mode: 'history', 单页面和多页面mode
+    // linkActiveClass: 'active',
+    routes: [
         {
-            path:'/',
-            component:homePage
+            path: '/',
+            name: 'portal',
+            component: homePage,
+            redirect: {name: 'home'},
         },
         {
-            path:'/about',
-            component:aboutPage
+            path: '/home',
+            name: 'home',
+            component: homePage,
+        },
+        {
+            path: '/about',
+            component: aboutPage
         }
     ]
 })

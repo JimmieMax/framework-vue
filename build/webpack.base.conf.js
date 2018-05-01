@@ -1,4 +1,6 @@
-const path = require('path');
+const
+    path = require('path'),
+    utils = require('./utils');
 
 module.exports = {
     //设置入口文件
@@ -10,26 +12,54 @@ module.exports = {
     output: {
         //根据config模块得知是根目录下的dist文件夹
         path: path.join(__dirname, '../src/dist'),
-        filename: '[name].bundle.js',
-    }, module: {
+        filename: '[name].js'
+    },
+    module: {
         rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
+                options: {
+                    loaders: utils.cssLoaders({
+                        sourceMap:false,
+                        extract: false
+                    }),
+                    postcss: [
+                        require('autoprefixer')({
+                            browsers: ['last 2 versions']
+                        })
+                    ]
+                }
             },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
+                include: [path.join(__dirname,'../src')],
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: 'img/[name].[hash:7].[ext]'
+                }
             },
             {
-                test: /\.(eot|ttf|woff|woff2|svg)$/,
-                loader: 'url-loader?limit=50000&name=[path][name].[ext]'
-            }
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: 'font/[name].[hash:7].[ext]'
+                }
+            },
+            {
+                test: /\.(mp3|mp4)(\?.*)?$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'media/[name].[ext]'
+                }
+            },
         ]
     },
     resolve: {
