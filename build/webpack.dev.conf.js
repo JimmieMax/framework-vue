@@ -6,15 +6,16 @@ const
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     utils = require('./utils'),
     config = require('../config'),
-    baseConfig = require('./webpack.base.conf');
+    baseConfig = require('./webpack.base.conf'),
+    wholePath = config.Server.wholePath();
 
 module.exports = Merge(baseConfig, {
     entry: {
         client: [
-            `webpack-dev-server/client?http://${config.Server.host + ":" + config.Server.port}`
+            `webpack-dev-server/client?http://${wholePath}`
         ],
         admin: [
-            `webpack-dev-server/client?http://${config.Server.host + ":" + config.Server.port}`
+            `webpack-dev-server/client?http://${wholePath}`
         ]
     },
     module: {
@@ -32,18 +33,18 @@ module.exports = Merge(baseConfig, {
         new webpack.HotModuleReplacementPlugin(),
         //报错但不退出webpack进程
         new OpenBrowserPlugin({
-            url: `http://${config.Server.host + ":" + config.Server.port}`
+            url: `http://${wholePath}`
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({
-            title:'Webpack Koa Vue Element-ui',
+            title: 'Webpack Koa Vue Element-ui',
             filename: 'index.html',
             template: path.resolve(__dirname, '../src/index.html'),
             chunks: ['client'],
             inject: true
         }),
         new HtmlWebpackPlugin({
-            title:'Admin',
+            title: 'Admin',
             filename: 'admin.html',
             template: path.resolve(__dirname, '../src/index.html'),
             chunks: ['admin'],

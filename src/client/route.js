@@ -12,7 +12,6 @@ export default new Router({
         {
             path: '/',
             name: 'portal',
-            component: homePage,
             redirect: {name: 'home'},
         },
         {
@@ -22,6 +21,7 @@ export default new Router({
         },
         {
             path: '/about',
+            name: 'about',
             component: aboutPage
         }
     ]

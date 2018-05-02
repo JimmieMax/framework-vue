@@ -1,11 +1,12 @@
 'use strict';
 
-const WebpackDevServer = require('webpack-dev-server')
-    , webpack = require('webpack')
-    , path = require('path')
-    , config = require('../config')
-    , webpackConfig = require('../build/webpack.dev.conf')
-    , compiler = webpack(webpackConfig);
+const
+    WebpackDevServer = require('webpack-dev-server'),
+    webpack = require('webpack'),
+    path = require('path'),
+    config = require('../config'),
+    webpackConfig = require('../build/webpack.dev.conf'),
+    compiler = webpack(webpackConfig);
 
 const app = new WebpackDevServer(compiler, {
     //默认会以根文件夹提供本地服务器，这里指定文件夹
@@ -20,5 +21,5 @@ const app = new WebpackDevServer(compiler, {
 
 app.listen(config.Server.port, 'localhost', err => {
     if (err) throw err;
-    console.log(`Listening on http://${config.Server.host + ":" + config.Server.port}`);
+    console.log(`Listening on http://${config.Server.wholePath()}`);
 });

@@ -9,7 +9,6 @@
     "dev": "node bin/dev-server"
   },
   "dependencies": {
-    "element-ui": "^2.3.4",
     "koa": "^2.5.0",
     "koa-static": "^4.0.2",
     "koa-views": "^6.1.4"
@@ -20,6 +19,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-component": "^1.1.0",
     "css-loader": "^0.28.11",
+    "element-ui": "^2.3.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",

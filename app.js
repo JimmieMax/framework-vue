@@ -1,10 +1,11 @@
 'use strict';
 
-const Koa = require('koa')
-    , path = require('path')
-    , views = require('koa-views')
-    , Static = require('koa-static')
-    , config = require('./config');
+const
+    Koa = require('koa'),
+    path = require('path'),
+    views = require('koa-views'),
+    Static = require('koa-static'),
+    config = require('./config');
 
 const app = new Koa();
 
