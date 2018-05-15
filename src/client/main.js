@@ -10,6 +10,9 @@ import {
 } from 'element-ui';
 import App from './app.vue'
 import router from './route.js'
+/*style*/
+import 'asset/style/base.css'
+import 'asset/style/standard-ui.scss'
 
 Vue.prototype.$ELEMENT = { size: 'small' };
 Vue.use(Container);

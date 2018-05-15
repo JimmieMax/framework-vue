@@ -68,6 +68,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js',
             //使用@替代src路径，当你引入src下的文件是可以使用import xx from "@/XX.js"
             '@': path.resolve(__dirname, '../src'),
+            'asset': path.resolve(__dirname, '../src/asset'),
             '_': path.resolve(__dirname, '../node_modules')
         }
     },

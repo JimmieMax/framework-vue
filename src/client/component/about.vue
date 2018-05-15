@@ -46,8 +46,10 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "../../asset/style/variables.scss";
+
     div {
-        background-color: yellow;
+        background-color: $primary_color;
     }
 </style>
